@@ -1,0 +1,15 @@
+machine:
+  php:
+    version: 5.5.11
+
+test:
+  override:
+    - php vendor/bin/phpunit
+
+dependencies:
+  pre:
+    - sed -i 's/^;//' ~/.phpenv/versions/$(phpenv global)/etc/conf.d/xdebug.ini
+
+general:
+  artifacts:
+    - "build/coverage/" # relative to the build directory  
