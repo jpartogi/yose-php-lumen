@@ -1,2 +1,7 @@
-# php-lumen-yose
-PHP Lumen Yose Example
+## Running locally
+
+php artisan serve
+
+## Running tests
+
+php phpunit.phar
