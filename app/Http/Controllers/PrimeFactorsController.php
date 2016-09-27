@@ -18,7 +18,7 @@ class PrimeFactorsController extends BaseController
   	  	$temp = $temp/2;
   	  }
       if (!is_numeric($number)) {
-          $arr = ["number"=> $number, "error" : "not a number"]
+          $arr = ["number"=> $number, "error" => "not a number"];
           return response()->json($arr);
       }
       return response()->json($arr);
