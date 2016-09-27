@@ -1,15 +1,13 @@
 <?php
 
-class AstroportTest extends TestCase
+namespace App\Http\Controllers;
+
+use Laravel\Lumen\Routing\Controller as BaseController;
+
+class AstroportController extends BaseController
 {
-    /**
-     * A basic test example.
-     *
-     * @return void
-     */
-    public function testAstroport()
+    public function astroport()
     {
-        $filterId = $this->visit('/astroport')->crawler
-            ->filterXPath("//body/div/[@id = 'astroport-name']")->text();
+      return view('astroport');
     }
 }
