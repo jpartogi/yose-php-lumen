@@ -1,7 +1,5 @@
 <?php
 
-use Symfony\Component\DomCrawler\Crawler;
-
 class ShareTest extends TestCase
 {
     /**
@@ -11,10 +9,9 @@ class ShareTest extends TestCase
      */
     public function testRepositoryLink()
     {
+        echo "\n* ShareTest::testRepositoryLink()";
         $visitor = $this->visit('/');
-        $crawler = $visitor->crawler;
-        $link = $crawler->selectLink('Repository README Link')->link();
-        $uri = $link->getUri();
-        $this->assertEquals($uri, 'https://github.com/anggisusanto/php-lumen-yose/share-link.html');
+        $link_uri = $visitor->crawler->selectLink('Repository README Link')->link()->getUri();
+        $this->assertEquals($link_uri, 'https://github.com/sriyanto/php-lumen-yose/link.html');
     }
 }
