@@ -9,6 +9,7 @@ class PingTest extends TestCase
      */
     public function testPing()
     {
+        echo "\n* PingTest::testPing()";
         $this->visit('/ping')
              ->seeJson([
                 'alive' => true,

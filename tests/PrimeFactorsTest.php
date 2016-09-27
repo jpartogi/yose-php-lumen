@@ -9,7 +9,7 @@ class PrimeFactorsTest extends TestCase
      */
     public function testPrime()
     {
-        $this->visit('/primeFactors?number=16')
-            ->seeJson(["number":32,"decomposition":[2,2,2,2,2]]);
+        $this->visit('/primeFactors?number=32')
+            ->seeJson(["number"=>32,"decomposition"=>[2,2,2,2,2]]);
     }
 }
