@@ -12,6 +12,6 @@ class ShareTest extends TestCase
         echo "\n* ShareTest::testRepositoryLink()";
         $visitor = $this->visit('/');
         $link_uri = $visitor->crawler->selectLink('Repository README Link')->link()->getUri();
-        $this->assertEquals($link_uri, 'https://github.com/sriyanto/php-lumen-yose/link.html');
+        $this->assertEquals($link_uri, 'https://github.com/sriyanto/php-lumen-yose');
     }
 }
