@@ -22,3 +22,5 @@ $app->get('/contactme',"ContactController@contactme");
 $app->get('/astroport',"AstroportController@astroport");
 
 $app->get('/share/link', "ShareController@link");
+
+$app->get('/minesweeper', "MinesweeperController@board");
