@@ -3,7 +3,6 @@
 test:
   override:
     - php vendor/bin/phpunit tests
-
 general:
   artifacts:
     - "build/coverage/" # relative to the build directory  
