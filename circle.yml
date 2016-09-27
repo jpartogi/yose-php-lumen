@@ -4,10 +4,6 @@ test:
   override:
     - php vendor/bin/phpunit tests
 
-dependencies:
-  pre:
-    - sed -i 's/^;//' ~/.phpenv/versions/$(phpenv global)/etc/conf.d/xdebug.ini
-
 general:
   artifacts:
     - "build/coverage/" # relative to the build directory  
