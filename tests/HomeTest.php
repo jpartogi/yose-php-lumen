@@ -9,6 +9,7 @@ class HomeTest extends TestCase
      */
     public function testHome()
     {
+        echo "\n* HomeTest::testHome()";
         $this->visit('/')
              ->see('Hello Yose');
     }
