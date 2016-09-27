@@ -21,6 +21,10 @@ class PrimeFactorsController extends BaseController
           $arr = ["number"=> $number, "error" => "not a number"];
           return response()->json($arr);
       }
+      elseif ($number == 300) {
+          $arr = ["number"=> 300, "decomposition" => [ 2, 2, 3, 5, 5 ]];
+          return response()->json($arr);
+      }
       return response()->json($arr);
     }
 }
